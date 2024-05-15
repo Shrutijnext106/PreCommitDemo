@@ -33,6 +33,17 @@
     "react-test-renderer": "18.2.0",
     "typescript": "5.0.4"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-satged"
+    }
+  },
+  "lint-satged": {
+    "*.{js,json,css,tsx}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
   "engines": {
     "node": ">=18"
   },
